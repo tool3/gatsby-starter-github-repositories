@@ -2,3 +2,7 @@
 
 # Repositoriez
 A simple repository and github profile landing page written with Gatsby.
+
+Built on top of `gatsby-starter-github-api`
+
+Improvements

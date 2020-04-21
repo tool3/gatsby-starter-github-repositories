@@ -50,6 +50,7 @@ template {
   display: none;
 }
 a, a:visited {
+  text-decoration: none;
   background-color: transparent;
   color: #fbc7d4;
   -webkit-text-decoration-skip: objects;

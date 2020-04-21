@@ -37,6 +37,8 @@ const Language = ({ language }) => {
       return <FaCss3 color={lang.color} />;
     case "HTML":
       return <FaHtml5 color={lang.color} />;
+    case "TypeScript":
+      return <FaJsSquare color={lang.color} />;
     default:
       return <FaJsSquare color={lang.color} />;
   }
