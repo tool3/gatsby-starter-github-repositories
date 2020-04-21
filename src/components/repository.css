@@ -44,3 +44,7 @@ p a {
     align-items: center;
     justify-content: space-between;
 }
+
+.repository_footer_languages {
+display: flex;
+}

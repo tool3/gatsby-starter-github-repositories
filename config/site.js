@@ -22,7 +22,7 @@ module.exports = {
           createdAt
           updatedAt
           resourcePath
-          languages(last: 1, orderBy: { field: SIZE, direction:ASC } ) {
+          languages(last: 3, orderBy: { field: SIZE, direction:ASC } ) {
             edges {
               node {
                 name
@@ -41,6 +41,6 @@ module.exports = {
     }
   }`,
   githubApiVariables: {
-    number_of_repos: 12,
+    number_of_repos: 15,
   },
 }
