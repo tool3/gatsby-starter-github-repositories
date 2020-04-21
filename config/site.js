@@ -1,14 +1,17 @@
 module.exports = {
-  title: `Gatsby Starter Github API`,
-  description: `Kick off your next, great Gatsby project with this Github source starter.`,
-  author: `@lundgren2`,
-  siteUrl: `https://gatsby-starter-github-api.netlify.com`,
+  title: `tool3 repos`,
+  description: `description of current github repositories owned by tool3`,
+  author: `Tal Hayut`,
+  linkedIn: 'https://linkedin.com/in/talhayut',
+  github: 'https://github.com/tool3',
+  siteUrl: `https://`,
   githubApiToken: process.env.GITHUB_API_TOKEN,
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
+      bio
+      login
       avatarUrl
-      isHireable
       resourcePath
       repositories(last: $number_of_repos, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction:ASC } ) {
         nodes {

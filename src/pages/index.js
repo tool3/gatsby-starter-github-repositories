@@ -4,48 +4,43 @@ import { graphql } from "gatsby"
 import Repository from "../components/repository"
 import Layout from "../components/layout"
 import Avatar from "../components/avatar"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import './index.css';
 
 const IndexPage = ({ data }) => {
   const {
     name,
     avatarUrl,
-    isHireable,
     repositories,
+    login,
+    bio
   } = data.githubData.data.viewer
 
   return (
     <Layout>
       <SEO title={`${name} repos`} />
-      <div style={{ maxWidth: `960px`, marginBottom: `1.45rem` }}>
-        <div style={{ maxWidth: `480px`, margin: `0px auto` }}>
-          <Image />
-        </div>
-        <div
-          style={{
-            display: `flex`,
-            alignItems: `center`,
-            margin: `1.45rem 0`,
-          }}
-        >
-          <Avatar img={avatarUrl} />
-          <div style={{ padding: 16 }}>
-            <h2 style={{ border: `none` }}>{name}</h2>
-            {isHireable && (
-              <h3 style={{ marginBottom: 0 }}>
-                I'm Hireable{" "}
-                <span role="img" aria-label="hand">
-                  👋
-                </span>
-              </h3>
-            )}
+      <Avatar img={avatarUrl} />
+      <div className="maker_wrapper">
+        <div>
+          <div className="maker">{name}</div>
+          <br />
+          <div className="aka">a.k.a</div>
+          <br />
+          <div className="wrapper">
+            <div className="login">{login}</div>
           </div>
+          <br />
+          <div className="bio">{bio}</div>
         </div>
-        {repositories.nodes
-          .map(repo => <Repository key={repo.name} repo={repo} />)
-          .reverse()}
       </div>
+      <div className="repos">
+        <div className="repository-list">
+          {repositories.nodes
+            .map(repo => <Repository key={repo.name} repo={repo} />)
+            .reverse()}
+        </div>
+      </div>
+
     </Layout>
   )
 }
@@ -58,8 +53,9 @@ export const gitHubQuery = graphql`
       data {
         viewer {
           name
+          bio
+          login
           avatarUrl
-          isHireable
           repositories {
             nodes {
               name

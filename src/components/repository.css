@@ -1,0 +1,46 @@
+.repository {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+p a {
+    color: #857da4 !important;
+}
+
+.repository-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  transition: 200ms ease-in-out;
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 16;
+  min-width: 400px;
+  height: 250px;
+  background-color: #1e1e1e
+}
+
+.repository-info:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px -7px #ff4da6;
+}
+
+.repository_footer {
+    color: lightgray;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repository_footer_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

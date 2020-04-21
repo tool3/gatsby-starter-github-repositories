@@ -8,6 +8,8 @@ module.exports = {
     title: config.title,
     description: config.description,
     author: config.author,
+    github: config.github,
+    linkedIn: config.linkedIn
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +44,27 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Merriweather`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Source Sans Pro`,
+            subsets: [`latin`]
+          },
+        ],
+      },
+    }
   ],
 }

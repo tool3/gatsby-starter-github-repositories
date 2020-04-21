@@ -3,12 +3,15 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: #1e1e1e;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
+  color: white;
 }
 article,
 aside,
@@ -30,6 +33,11 @@ progress,
 video {
   display: inline-block;
 }
+
+div {
+  color: lightcyan;
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -41,10 +49,12 @@ progress {
 template {
   display: none;
 }
-a {
+a, a:visited {
   background-color: transparent;
+  color: #fbc7d4;
   -webkit-text-decoration-skip: objects;
 }
+
 a:active,
 a:hover {
   outline-width: 0;
