@@ -51,4 +51,12 @@ p a {
     height: 250px;
     background-color: #1e1e1e;
   }
+
+  .repo_link {
+    font-size: 1rem;
+  }
+
+  .repo_desc {
+      font-size: 1.1rem;
+  }
 }

@@ -67,7 +67,7 @@ const RepositoryFooter = ({ repo }) => {
       {
         repo.licenseInfo && (
           <FooterItem>
-            <Octicon icon={Law} /> {repo.licenseInfo.name}
+            <Octicon icon={Law} /> {repo.licenseInfo.name.replace('License', '')}
           </FooterItem>
         )
       }
@@ -80,12 +80,12 @@ const RepositoryFooter = ({ repo }) => {
 const RepositoryDescription = ({ repo }) => (
   <div>
     <p>
-      {repo.description}
+      <div className="repo_desc">{repo.description}</div>
       {repo.homepageUrl && (
-        <>
+        <div className="repo_link">
           <br />
           <a href={repo.homepageUrl}>{repo.homepageUrl}</a>
-        </>
+        </div>
       )}
     </p>
   </div>
