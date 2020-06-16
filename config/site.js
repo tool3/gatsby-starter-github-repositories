@@ -41,6 +41,6 @@ module.exports = {
     }
   }`,
   githubApiVariables: {
-    number_of_repos: 15,
+    number_of_repos: 100,
   },
 }

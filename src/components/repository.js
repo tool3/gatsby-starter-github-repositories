@@ -1,7 +1,7 @@
 import React from "react"
 import Octicon, { Law, RepoForked } from "@githubprimer/octicons-react"
 import './repository.css';
-import { FaStar, FaJsSquare, FaCss3, FaHtml5 } from 'react-icons/fa';
+import { FaStar, FaJsSquare, FaCss3, FaHtml5, FaPython, FaDocker } from 'react-icons/fa';
 
 const RepositoryHeader = ({ repo }) => {
   const languages = repo.languages.edges;
@@ -31,6 +31,10 @@ const FooterLangugages = ({ children }) => (
 const Language = ({ language }) => {
   const lang = language.node;
   switch (lang.name) {
+    case "Dockerfile":
+      return <FaDocker color={lang.color} />;
+    case "Python":
+      return <FaPython color={lang.color} />;
     case "JavaScript":
       return <FaJsSquare color={lang.color} />;
     case "CSS":
@@ -79,21 +83,21 @@ const RepositoryFooter = ({ repo }) => {
 
 const RepositoryDescription = ({ repo }) => (
   <div>
-    <p>
-      <div className="repo_desc">{repo.description}</div>
-      {repo.homepageUrl && (
-        <div className="repo_link">
-          <br />
-          <a href={repo.homepageUrl}>{repo.homepageUrl}</a>
-        </div>
-      )}
-    </p>
+    <div className="repo_desc">{repo.description}</div>
+    {repo.homepageUrl && (
+      <div className="repo_link">
+        <br />
+        <a href={repo.homepageUrl}>{repo.homepageUrl}</a>
+      </div>
+    )}
   </div>
 )
 
-const Repository = ({ repo }) => {
+const Repository = (props) => {
+  const { repo, inView } = props;
+
   return (
-    <div className="repository-info">
+    <div className={`repository-info ${inView ? 'slide' : ''}`}>
       <RepositoryHeader repo={repo} />
       <RepositoryDescription repo={repo} />
       <RepositoryFooter repo={repo} />

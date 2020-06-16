@@ -7,6 +7,8 @@ import Avatar from "../components/avatar"
 import SEO from "../components/seo"
 import './index.css';
 
+
+
 const IndexPage = ({ data }) => {
   const {
     name,
@@ -36,7 +38,7 @@ const IndexPage = ({ data }) => {
       <div className="repos">
         <div className="repository-list">
           {repositories.nodes
-            .map(repo => <Repository key={repo.name} repo={repo} />)
+            .map((repo) => <Repository key={repo.name} repo={repo} />)
             .reverse()}
         </div>
       </div>

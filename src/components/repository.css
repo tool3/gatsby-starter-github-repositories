@@ -7,6 +7,7 @@
   text-decoration: none;
 }
 
+
 p a {
   color: #857da4 !important;
 }
@@ -26,6 +27,44 @@ p a {
   background-color: #1e1e1e;
   box-shadow: 0px 0px 15px -7px #ff4da6;
 }
+
+.slide {
+    -webkit-animation: slide-rotate-ver-r-fwd 0.5s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: slide-rotate-ver-r-fwd 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+}
+
+
+@-webkit-keyframes slide-rotate-ver-r-fwd {
+    0% {
+      -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+              transform: translateX(0) translateZ(0) rotateY(0);
+      -webkit-transform-origin: center left;
+              transform-origin: center left;
+    }
+    100% {
+      -webkit-transform: translateX(150px) translateZ(130px) rotateY(-90deg);
+              transform: translateX(150px) translateZ(130px) rotateY(-90deg);
+      -webkit-transform-origin: center left;
+              transform-origin: center left;
+    }
+  }
+  @keyframes slide-rotate-ver-r-fwd {
+    0% {
+      -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+              transform: translateX(0) translateZ(0) rotateY(0);
+      -webkit-transform-origin: center left;
+              transform-origin: center left;
+    }
+    100% {
+      -webkit-transform: translateX(150px) translateZ(130px) rotateY(-90deg);
+              transform: translateX(150px) translateZ(130px) rotateY(-90deg);
+      -webkit-transform-origin: center left;
+              transform-origin: center left;
+    }
+  }
+
 
 .repository_footer {
   color: lightgray;
@@ -57,6 +96,6 @@ p a {
   }
 
   .repo_desc {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 }

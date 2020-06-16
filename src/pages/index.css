@@ -35,10 +35,13 @@
   animation: slideshow 10s linear infinite;
 }
 
-
 @keyframes slideshow {
-  0%    { left: 0; }
-  100%  { left: -200%; }
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200%;
+  }
 }
 
 .repository-list::-webkit-scrollbar {
@@ -47,12 +50,12 @@
 
 /* Track */
 .repository-list::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: linear-gradient(to right, #c04848, #480048);
 }
 
 /* Handle */
 .repository-list::-webkit-scrollbar-thumb {
-  background: #888;
+  background: pink;
   border-radius: 20px;
   width: 5px;
 }
@@ -81,22 +84,24 @@
 }
 
 .bio {
-    text-align: center;
+  text-align: center;
 }
 
 .login {
-    font-size: 35px;
-    color: #fff;
-    text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
-  
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
