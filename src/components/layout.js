@@ -22,7 +22,12 @@ const Layout = ({ children }) => (
       <div className="main">
         {children}
         <footer className="footer">
-          <div>
+          <div className="github_btns">
+            <iframe src="https://ghbtns.com/github-btn.html?user=tool3&repo=gatsby-starter-github-repositories&type=star" frameBorder="0" scrolling="0" width="60" height="20" title="GitHub"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=tool3&type=follow" frameBorder="0" scrolling="0" width="117" height="20" title="GitHub"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=tool3&type=fork" frameBorder="0" scrolling="0" width="60" height="20" title="GitHub"></iframe>
+          </div>
+          <div className="author">
             {data.site.siteMetadata.author} © {new Date().getFullYear()}
           </div>
           <div className="footer_icons">

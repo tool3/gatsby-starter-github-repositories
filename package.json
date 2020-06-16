@@ -1,6 +1,6 @@
 {
-  "name": "tool3_repositories",
-  "description": "My github repositories",
+  "name": "gatsby-starter-github-repositories",
+  "description": "a simple github-api based repositories viewer",
   "version": "0.1.0",
   "author": "Tal Hayut",
   "dependencies": {
