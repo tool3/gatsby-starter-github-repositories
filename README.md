@@ -4,7 +4,7 @@
 
 A simple repository and github profile landing page written with Gatsby.
 
-Built on top of `gatsby-starter-github-api`
+Built on top of [`gatsby-starter-github-api`](https://github.com/lundgren2/gatsby-starter-github-api)
 
 Feel free to fork and change `./config/site.js`
 
